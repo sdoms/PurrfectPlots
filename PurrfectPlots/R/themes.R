@@ -5,14 +5,17 @@
 #' @param dark_text The darkest color of the text. The function will define two lighter colors based on this. 
 #' @param title_font The name of the title font
 #' @param main_font The name of the main font
+#' @importFrom ggplot2 %+replace% theme_test theme element_text element_blank element_rect margin rel
 #' @export
 theme_cat <- function(base_size = 12, 
                             dark_text = "#1A242F", title_font="Raleway Medium", main_font="IBM Plex Sans") {
+  
   extrafont::loadfonts()
+  
   mid_text <-  monochromeR::generate_palette(dark_text, "go_lighter", n_colours = 5)[2]
   light_text <-  monochromeR::generate_palette(dark_text, "go_lighter", n_colours = 5)[3]
   
-  theme_test(base_size = base_size) %+replace% 
+  ggplot2::theme_test(base_size = base_size) %+replace% 
     theme(text = element_text(colour = mid_text, family = main_font, lineheight = 1.1),
           plot.title = element_text(colour = dark_text, family = title_font, size = rel(1.6), margin = margin(12, 0, 8, 0)),
           plot.subtitle = element_text(size = rel(1.1), family = title_font, margin = margin(4, 0, 0, 0)),

@@ -7,7 +7,7 @@
 scale_fill_purrs(palette_name = "lily", ...)
 }
 \arguments{
-\item{palette_name}{name of the colour palette}
+\item{palette_name}{name of the color palette}
 }
 \value{
 ggplot colored graph

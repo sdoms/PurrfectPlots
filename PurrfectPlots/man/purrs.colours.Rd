@@ -2,15 +2,15 @@
 % Please edit documentation in R/scale_colour_purrs.R
 \name{purrs.colours}
 \alias{purrs.colours}
-\title{Get the cat colored palette}
+\title{Get the cat coloured palette}
 \usage{
 purrs.colours(n = "lily")
 }
 \arguments{
-\item{n}{name of the colour palette. Defaults to lily}
+\item{n}{name of the colour palette. Defaults to lily. Available options are: "lily", "binky", "teddy", "ginger", "grumpyCat", "caliente", "disney"}
 }
 \value{
-The color palette of choice (catlette)
+The colour palette of choice (catlette)
 }
 \description{
 This function loads the respective palette and applies the colour to the ggplot.

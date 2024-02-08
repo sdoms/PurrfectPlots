@@ -10,7 +10,7 @@
 theme_cat <- function(base_size = 12, 
                             dark_text = "#1A242F", title_font="Raleway Medium", main_font="IBM Plex Sans") {
   
-  extrafont::loadfonts()
+  # extrafont::loadfonts()
   
   mid_text <-  monochromeR::generate_palette(dark_text, "go_lighter", n_colours = 5)[2]
   light_text <-  monochromeR::generate_palette(dark_text, "go_lighter", n_colours = 5)[3]
